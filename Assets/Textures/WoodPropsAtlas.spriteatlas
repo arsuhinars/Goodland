@@ -1,0 +1,154 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WoodPropsAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 2
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: da41ac1c62b08274bbcc2465ca6a2d34, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 63726f7053f3a1045ae72a23466f8efd, type: 3}
+  - {fileID: 21300000, guid: f548838118d07e745ac8b752d673d073, type: 3}
+  - {fileID: 21300000, guid: d3458ab1ae780ed4ca8b300f3234d153, type: 3}
+  - {fileID: 21300000, guid: 55489de1aaf7f5e4c9ba4310143ce7d4, type: 3}
+  - {fileID: 21300000, guid: 9b2110a2ffed98945b3898dcf9303845, type: 3}
+  - {fileID: 21300000, guid: 3e273aa2c7fb6a84f85ad7b3f70773ee, type: 3}
+  - {fileID: 21300000, guid: 4cedca53aff11ee4d9278c654d8fd6f1, type: 3}
+  - {fileID: 21300000, guid: 08b9da63fb03e794f8e46b6ba85e0bb5, type: 3}
+  - {fileID: 21300000, guid: e00febc357425524ebdfb7fda79cfe08, type: 3}
+  - {fileID: 21300000, guid: 4627d064d5f9b314da51fb87ec705ffc, type: 3}
+  - {fileID: 21300000, guid: ee61b6d4c819a2d42a61c3e796c4ccb9, type: 3}
+  - {fileID: 21300000, guid: 64d06405648bb644ea4cf12dedda49ca, type: 3}
+  - {fileID: 21300000, guid: 8c88a5051f02db3448effd574c9a75c8, type: 3}
+  - {fileID: 21300000, guid: 2506cb050941cf640b5ab2e999393f9c, type: 3}
+  - {fileID: 21300000, guid: bad0a46523867534eb1a4246edc21ad6, type: 3}
+  - {fileID: 21300000, guid: bb0e19d5db70b254988ddd242ce0235a, type: 3}
+  - {fileID: 21300000, guid: 618891e5ee8e3584e8db701e0bec7d79, type: 3}
+  - {fileID: 21300000, guid: 81e4785624c96ad49a322a3d716c9e88, type: 3}
+  - {fileID: 21300000, guid: c0c1b9662a6527749b4cc8c67f6500a2, type: 3}
+  - {fileID: 21300000, guid: a9e69486433032949a8b59f5750f3857, type: 3}
+  - {fileID: 21300000, guid: 110db0a63b840124da6bd5e4733be6f2, type: 3}
+  - {fileID: 21300000, guid: 31974da6fd9b0b64888a96007529dc0c, type: 3}
+  - {fileID: 21300000, guid: 1b3dacc65a865984f815beb9e55c4824, type: 3}
+  - {fileID: 21300000, guid: 29a974e6ec2497940a2b97e3adf9b860, type: 3}
+  - {fileID: 21300000, guid: 34084f5711c692443a48ab2604fca52e, type: 3}
+  - {fileID: 21300000, guid: 1e30ffa789600d348bd8d6f04188ad55, type: 3}
+  - {fileID: 21300000, guid: d5405cb74ed81494aabf5f3d7ad3f4a7, type: 3}
+  - {fileID: 21300000, guid: d6cc000892d0bb84489010dd07287e9f, type: 3}
+  - {fileID: 21300000, guid: 4ed1ea087687e464992b54132811e351, type: 3}
+  - {fileID: 21300000, guid: 788d7a4861d4fec4ab25bae8c73df5b6, type: 3}
+  - {fileID: 21300000, guid: 9fe43a582c4d5e64cb02b2f1ee62888d, type: 3}
+  - {fileID: 21300000, guid: 2115a298d69465247840e6dadea8b3e8, type: 3}
+  - {fileID: 21300000, guid: 240bb019ca4d85c4080eacd0bdfd8967, type: 3}
+  - {fileID: 21300000, guid: 4ab8f129e3912884685a498306d39fec, type: 3}
+  - {fileID: 21300000, guid: e4100f692ef880c4095a3dc898dae4d8, type: 3}
+  - {fileID: 21300000, guid: 041468f9e31708947a1514aa47fd86c3, type: 3}
+  - {fileID: 21300000, guid: 0bcd617a178ed0b4d9f0622c17ec01e8, type: 3}
+  - {fileID: 21300000, guid: b4bf8f9af5d4e964b9a8b5277c4f194a, type: 3}
+  - {fileID: 21300000, guid: d301d93bddf917042a415375faae758e, type: 3}
+  - {fileID: 21300000, guid: 298d0c6b61859d949b78d39134c64407, type: 3}
+  - {fileID: 21300000, guid: 396fb17b4d501cb48a0588a984ed3ec4, type: 3}
+  - {fileID: 21300000, guid: 7a57c57c3dfc0994aa65a174cda120bc, type: 3}
+  - {fileID: 21300000, guid: 96ae2c8c1ee8ccd4d842299d3b522219, type: 3}
+  - {fileID: 21300000, guid: 42f049fccd65a6d4ab7954a08ce8db5c, type: 3}
+  - {fileID: 21300000, guid: ec93f13d38a2df248aa69be4d87d1efd, type: 3}
+  - {fileID: 21300000, guid: 4cbefa4ddd59b364699bf50c49ce7543, type: 3}
+  - {fileID: 21300000, guid: c253ac5d2a57ab841921aeeb5ac08bab, type: 3}
+  - {fileID: 21300000, guid: 4be7a69da13658043942e729f9fa0c4f, type: 3}
+  - {fileID: 21300000, guid: f851452ee591a9f43a0df911d2b609a0, type: 3}
+  - {fileID: 21300000, guid: f637c99e1df9c464e9097e0feb5cca31, type: 3}
+  - {fileID: 21300000, guid: c8602fde1db01c84c82a18227de79a91, type: 3}
+  - {fileID: 21300000, guid: 1292152fe76e514469793f71be47b704, type: 3}
+  - {fileID: 21300000, guid: 8731b68fb0e3c764d9e1b2a85b0ec3b9, type: 3}
+  - {fileID: 21300000, guid: fe4bbd9f51f36b34b9d758dee2c2e382, type: 3}
+  - {fileID: 21300000, guid: 07f425cff2963504ea565aaddf28b98c, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - elementWood027
+  - elementWood015
+  - elementWood030
+  - elementWood052
+  - elementWood034
+  - elementWood001
+  - elementWood005
+  - elementWood029
+  - elementWood054
+  - elementWood047
+  - elementWood038
+  - elementWood007
+  - elementWood002
+  - elementWood031
+  - elementWood032
+  - elementWood051
+  - elementWood016
+  - elementWood009
+  - elementWood010
+  - elementWood021
+  - elementWood024
+  - elementWood035
+  - elementWood040
+  - elementWood003
+  - elementWood041
+  - elementWood018
+  - elementWood048
+  - elementWood044
+  - elementWood039
+  - elementWood042
+  - elementWood020
+  - elementWood019
+  - elementWood028
+  - elementWood045
+  - elementWood046
+  - elementWood013
+  - elementWood006
+  - elementWood037
+  - elementWood000
+  - elementWood022
+  - elementWood036
+  - elementWood043
+  - elementWood050
+  - elementWood025
+  - elementWood017
+  - elementWood023
+  - elementWood012
+  - elementWood033
+  - elementWood011
+  - elementWood026
+  - elementWood053
+  - elementWood008
+  - elementWood014
+  - elementWood049
+  - elementWood004
+  m_RenderDataMap: {}
+  m_Tag: WoodPropsAtlas
+  m_IsVariant: 0

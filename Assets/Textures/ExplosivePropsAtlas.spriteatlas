@@ -1,0 +1,160 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ExplosivePropsAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 2
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 297487fd3653be34d846d00d462964aa, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 2c35ef70f2bd188418d37543612a919b, type: 3}
+  - {fileID: 21300000, guid: e3aa53a08643e8e47af620710ce5d19e, type: 3}
+  - {fileID: 21300000, guid: bd500db047aaad44787d861b26070b02, type: 3}
+  - {fileID: 21300000, guid: 1e2c8d01bc0fd9a4789bf2ed0d7610b6, type: 3}
+  - {fileID: 21300000, guid: 88753a71682975e478439e2986584ef1, type: 3}
+  - {fileID: 21300000, guid: a2b362d1f855f6447a00abcefbf826bf, type: 3}
+  - {fileID: 21300000, guid: 75059af1a89d2c340af895458af78b82, type: 3}
+  - {fileID: 21300000, guid: b0cdd572ba821bd4e9707d6b3dd8a842, type: 3}
+  - {fileID: 21300000, guid: 20b91c9262e380349ba3e6487b3249df, type: 3}
+  - {fileID: 21300000, guid: c599f5e2a9b320c4888223c65427b7ae, type: 3}
+  - {fileID: 21300000, guid: a9cec003130d73047a93df661f7f851d, type: 3}
+  - {fileID: 21300000, guid: 53f07e03ea75d084a9f29eb9c485ee0a, type: 3}
+  - {fileID: 21300000, guid: 35aba613a42bdd2409ee8a7c4f4156b8, type: 3}
+  - {fileID: 21300000, guid: d525b95321bc5ee479311c34953bfdcc, type: 3}
+  - {fileID: 21300000, guid: 3e7ae973080e1bc42803016a97b45065, type: 3}
+  - {fileID: 21300000, guid: 8f4b20931eaee214d81076c4afcb65a2, type: 3}
+  - {fileID: 21300000, guid: 03468d2446f30094981febe9b8d31e36, type: 3}
+  - {fileID: 21300000, guid: 0244c5f4a663e90488ff568a5b29433b, type: 3}
+  - {fileID: 21300000, guid: 64a44505b53b56246a7b4a6ead3f0065, type: 3}
+  - {fileID: 21300000, guid: 8b18e165cccc8b64181160f6a51a05ec, type: 3}
+  - {fileID: 21300000, guid: 93d30d851b758e94ea4b436d35a24d3b, type: 3}
+  - {fileID: 21300000, guid: 84d633e56aa46fc40bc778d9955293de, type: 3}
+  - {fileID: 21300000, guid: cf78a3369e249cb4f92f45a2e717306c, type: 3}
+  - {fileID: 21300000, guid: 2ffaa476afb18f540acc09cce064ab8a, type: 3}
+  - {fileID: 21300000, guid: 12710117bbf81964cbba7c5e82555ed4, type: 3}
+  - {fileID: 21300000, guid: f1849317354e6b343aa5f3b97560442b, type: 3}
+  - {fileID: 21300000, guid: 0eb113576b4d8324c898d984c8aac836, type: 3}
+  - {fileID: 21300000, guid: ce708367809e0fc41a9e8c4d5a09cb1f, type: 3}
+  - {fileID: 21300000, guid: 762174779ff71c14eba1ac5423657614, type: 3}
+  - {fileID: 21300000, guid: 6ce5b6a72afe97b438b857198b659204, type: 3}
+  - {fileID: 21300000, guid: 85f1ea08cc3c3a947a0887b9e19feadd, type: 3}
+  - {fileID: 21300000, guid: 3c4d58183747f6541b2418c92298c929, type: 3}
+  - {fileID: 21300000, guid: bb027328f04cf2241b72ea1ba881bfc3, type: 3}
+  - {fileID: 21300000, guid: f7931978aa05b0949a9a839d1d5b715f, type: 3}
+  - {fileID: 21300000, guid: 094045c8607e57e499c1df0f0dcbc582, type: 3}
+  - {fileID: 21300000, guid: 9ce7bf2958a60334a98693496a1a4129, type: 3}
+  - {fileID: 21300000, guid: 9cbb81592c1f118479621f4efb66ceac, type: 3}
+  - {fileID: 21300000, guid: 640c8b59439601b49b5494c4e4e92338, type: 3}
+  - {fileID: 21300000, guid: 33a66c698f987fc4b89f8c1511006e83, type: 3}
+  - {fileID: 21300000, guid: 5ba68b79419580645aa4d00753cc6bdc, type: 3}
+  - {fileID: 21300000, guid: 60e965dae2b1a28408033ddf844f3eaf, type: 3}
+  - {fileID: 21300000, guid: d5726eea071a2e748a05173aee57fdbc, type: 3}
+  - {fileID: 21300000, guid: 82e1fa4b19605504a9d9b90801f3aaf9, type: 3}
+  - {fileID: 21300000, guid: a8fe3f5b5c8d8d941ba2df3330fd9f89, type: 3}
+  - {fileID: 21300000, guid: 35b3496bdc48fa043b281107cafab4b8, type: 3}
+  - {fileID: 21300000, guid: 3c189c9b7181b7b4a8ec3e8eb510fcd3, type: 3}
+  - {fileID: 21300000, guid: c5f6a0cc6080e544996d53b973bb1f9f, type: 3}
+  - {fileID: 21300000, guid: 9798e1ccc24d7d747a0a694e9e42151d, type: 3}
+  - {fileID: 21300000, guid: 84b9c5ecf8d14734ebbe7238efe8b6a5, type: 3}
+  - {fileID: 21300000, guid: 8f9cc7ec9cd252445b48e3b13fe21821, type: 3}
+  - {fileID: 21300000, guid: a050ff1d8fae5a04487f373ba7c5630f, type: 3}
+  - {fileID: 21300000, guid: 0afcf62d3d144534d8270cb379f9b387, type: 3}
+  - {fileID: 21300000, guid: 0b06182d803f63647a58feb0677eb3d3, type: 3}
+  - {fileID: 21300000, guid: c9bccdeda32395e4e9466ddd56ff777a, type: 3}
+  - {fileID: 21300000, guid: 3845c49ebb241534c84acdb5d7e0b34d, type: 3}
+  - {fileID: 21300000, guid: b6b348cea4cad1143a41b207309c141b, type: 3}
+  - {fileID: 21300000, guid: 22f5866f76231a546807bb3df0acc410, type: 3}
+  - {fileID: 21300000, guid: bac941df5173426419b0587aad95831e, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - elementExplosive001
+  - elementExplosive004
+  - elementExplosive029
+  - elementExplosive037
+  - elementExplosive039
+  - elementExplosive042
+  - elementExplosive047
+  - elementExplosive014
+  - elementExplosive005
+  - elementExplosive008
+  - elementExplosive006
+  - elementExplosive018
+  - elementExplosive053
+  - elementExplosive033
+  - elementExplosive023
+  - elementExplosive022
+  - elementExplosive048
+  - elementExplosive027
+  - elementExplosive009
+  - elementExplosive030
+  - elementExplosive035
+  - elementExplosive020
+  - elementExplosive044
+  - elementExplosive028
+  - elementExplosive024
+  - elementExplosive010
+  - elementExplosive026
+  - elementExplosive056
+  - elementExplosive057
+  - elementExplosive034
+  - elementExplosive046
+  - elementExplosive011
+  - elementExplosive049
+  - elementExplosive000
+  - elementExplosive052
+  - elementExplosive038
+  - elementExplosive054
+  - elementExplosive021
+  - elementExplosive016
+  - elementExplosive045
+  - elementExplosive015
+  - elementExplosive041
+  - elementExplosive012
+  - elementExplosive055
+  - elementExplosive040
+  - elementExplosive003
+  - elementExplosive031
+  - elementExplosive043
+  - elementExplosive007
+  - elementExplosive025
+  - elementExplosive036
+  - elementExplosive019
+  - elementExplosive051
+  - elementExplosive017
+  - elementExplosive013
+  - elementExplosive050
+  - elementExplosive002
+  - elementExplosive032
+  m_RenderDataMap: {}
+  m_Tag: ExplosivePropsAtlas
+  m_IsVariant: 0

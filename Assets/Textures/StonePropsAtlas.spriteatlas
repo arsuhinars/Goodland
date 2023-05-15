@@ -1,0 +1,154 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: StonePropsAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 2
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: c5bfe6557c4c43641bd0ba31b86823a8, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 3e80ab308a6171c4d84f16ff64ab5f83, type: 3}
+  - {fileID: 21300000, guid: a348004135aefa540b443db5c2d8708d, type: 3}
+  - {fileID: 21300000, guid: fd85775122ba0eb49809b476fd636dbe, type: 3}
+  - {fileID: 21300000, guid: b02cfb6397434744f96baca7edf1a2ad, type: 3}
+  - {fileID: 21300000, guid: a383e7c397a07c748ae615030c8fca27, type: 3}
+  - {fileID: 21300000, guid: 11abc2e3cc509fb44beb080b5be7335a, type: 3}
+  - {fileID: 21300000, guid: e92c2944451841c4482ea16054fee7df, type: 3}
+  - {fileID: 21300000, guid: 04c3ae9457961e3499644ee0732233b9, type: 3}
+  - {fileID: 21300000, guid: 821190d47d8e3084894ac0dfa06d499b, type: 3}
+  - {fileID: 21300000, guid: bd5cf2e4787a73847a50d00b565afb95, type: 3}
+  - {fileID: 21300000, guid: da966e457862e524894cdaeee2c9e76b, type: 3}
+  - {fileID: 21300000, guid: 77ebad550a027c849bcb2d8809ebc240, type: 3}
+  - {fileID: 21300000, guid: 10451aa54a091674887768a6ee717db4, type: 3}
+  - {fileID: 21300000, guid: cc7da50683e93c1439fb021b45902051, type: 3}
+  - {fileID: 21300000, guid: c7b748264b8d3df49aef5ed3842af9eb, type: 3}
+  - {fileID: 21300000, guid: 5b12ae76ae98e534ea459a65f58721a5, type: 3}
+  - {fileID: 21300000, guid: 845bbea694325f2418b6091c0b7f0cda, type: 3}
+  - {fileID: 21300000, guid: 5fd843b77c62b844e9f86d73f7140f4d, type: 3}
+  - {fileID: 21300000, guid: 38e9a3b7a57292645b9bed9eba8c99f5, type: 3}
+  - {fileID: 21300000, guid: c32b61e76c853a04a820f5558768eb34, type: 3}
+  - {fileID: 21300000, guid: 7e138be7ffe552a459f6a90614490cd3, type: 3}
+  - {fileID: 21300000, guid: 3c63bf289a4a6044590e2d29cb06a837, type: 3}
+  - {fileID: 21300000, guid: 71c9b96801988384281bbaca37d5c0e1, type: 3}
+  - {fileID: 21300000, guid: 0e1180783a706dd47a5da5713d6ea7e8, type: 3}
+  - {fileID: 21300000, guid: 82ddaf884f235c345938313d17a6159e, type: 3}
+  - {fileID: 21300000, guid: 5a5e81199f8fc7c44ad9c04d8a4da725, type: 3}
+  - {fileID: 21300000, guid: f56cb669484026c4b93ffd05e459e6cd, type: 3}
+  - {fileID: 21300000, guid: f52936c90e859f84ab598441b43c9ece, type: 3}
+  - {fileID: 21300000, guid: 450e28d98574d93429f2f2152a1dfd02, type: 3}
+  - {fileID: 21300000, guid: a80334f98c544b9419cdb5834ad1287f, type: 3}
+  - {fileID: 21300000, guid: 6312ddf9c8e31734babeec9c8cb3ec82, type: 3}
+  - {fileID: 21300000, guid: 0a8b5ffa83551294982a46a4885e9e52, type: 3}
+  - {fileID: 21300000, guid: 9e362abb862370c4ba5cc2e48e238b60, type: 3}
+  - {fileID: 21300000, guid: 188279cb66254b24b893948ff241f310, type: 3}
+  - {fileID: 21300000, guid: 9a2c1fdb67ca49646b5dadf067b18ea7, type: 3}
+  - {fileID: 21300000, guid: 2cfb272c42d9f9646abe6576858106d5, type: 3}
+  - {fileID: 21300000, guid: 227f033c6cf0f7d4ba01b361402cf2c1, type: 3}
+  - {fileID: 21300000, guid: 4b2cf45cf09ecf74eb5a4063274d2113, type: 3}
+  - {fileID: 21300000, guid: 2626e09c04981f94388d5cf9bd13ff06, type: 3}
+  - {fileID: 21300000, guid: 7088eeac6eaf40844b50945d1a4e60bf, type: 3}
+  - {fileID: 21300000, guid: 4dc1f2dc3ad8b7b49ac8559424fdd513, type: 3}
+  - {fileID: 21300000, guid: dbd6ff3d49e40c74dbc4952ca92cbd5e, type: 3}
+  - {fileID: 21300000, guid: e02d6d7d6f6f01a408b68be8a93faef0, type: 3}
+  - {fileID: 21300000, guid: f7f6c73ed89e15344a040407a6d467e0, type: 3}
+  - {fileID: 21300000, guid: 65a0d38e4f4475543883eeee0d0e96e2, type: 3}
+  - {fileID: 21300000, guid: c66b91ce25aa6d7489d50f53caf232c0, type: 3}
+  - {fileID: 21300000, guid: af2c78fe65331d648b995deb8586e600, type: 3}
+  - {fileID: 21300000, guid: 23d9173fa357db84a9bba557f820d86a, type: 3}
+  - {fileID: 21300000, guid: 21de514ff05a87547959b6d5953da7bd, type: 3}
+  - {fileID: 21300000, guid: bdb3fa9f73f51894980979183b880f3f, type: 3}
+  - {fileID: 21300000, guid: 1c73bb9f0579e4c4aaac432761ce266f, type: 3}
+  - {fileID: 21300000, guid: 4c5977dfaa0fe88478b09dd4e5ef7bf8, type: 3}
+  - {fileID: 21300000, guid: 7eda98dfffe6651439076fb7786328cb, type: 3}
+  - {fileID: 21300000, guid: 474e1fef40909c647804cacc17641c04, type: 3}
+  - {fileID: 21300000, guid: a33733ff894e63a439771b0ef756dd09, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - elementStone020
+  - elementStone006
+  - elementStone033
+  - elementStone052
+  - elementStone027
+  - elementStone030
+  - elementStone049
+  - elementStone007
+  - elementStone026
+  - elementStone013
+  - elementStone045
+  - elementStone002
+  - elementStone005
+  - elementStone034
+  - elementStone010
+  - elementStone021
+  - elementStone047
+  - elementStone018
+  - elementStone051
+  - elementStone011
+  - elementStone019
+  - elementStone031
+  - elementStone032
+  - elementStone038
+  - elementStone003
+  - elementStone044
+  - elementStone014
+  - elementStone028
+  - elementStone041
+  - elementStone035
+  - elementStone000
+  - elementStone001
+  - elementStone025
+  - elementStone036
+  - elementStone040
+  - elementStone029
+  - elementStone004
+  - elementStone024
+  - elementStone042
+  - elementStone053
+  - elementStone009
+  - elementStone012
+  - elementStone015
+  - elementStone039
+  - elementStone016
+  - elementStone054
+  - elementStone017
+  - elementStone037
+  - elementStone023
+  - elementStone046
+  - elementStone022
+  - elementStone008
+  - elementStone048
+  - elementStone043
+  - elementStone050
+  m_RenderDataMap: {}
+  m_Tag: StonePropsAtlas
+  m_IsVariant: 0

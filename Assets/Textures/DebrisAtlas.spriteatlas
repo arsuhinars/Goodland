@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DebrisAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 2
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: e06eb4d61275ad147acb86c38f015b22, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 27cfb9b0f4d3a224483aaa74be2536ce, type: 3}
+  - {fileID: 21300000, guid: 5347560232598e549ba92b22fa117aba, type: 3}
+  - {fileID: 21300000, guid: 2d9a4aa592136b94bafed68611d00190, type: 3}
+  - {fileID: 21300000, guid: d2f3759643411ce4bbf6193415bf3e3b, type: 3}
+  - {fileID: 21300000, guid: d3885ca65f2fa0f4482207ecbe710071, type: 3}
+  - {fileID: 21300000, guid: 41f068e6ef162464d9a9c9805ae3cad2, type: 3}
+  - {fileID: 21300000, guid: 6274d78787defee40a1af7114beabdc5, type: 3}
+  - {fileID: 21300000, guid: 80a60b5da583c864ab9af51f52e5d21f, type: 3}
+  - {fileID: 21300000, guid: 596b719db41365e459aa5ccc3fee8988, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - debrisStone_3
+  - debrisStone_2
+  - debrisWood_1
+  - debrisGlass_2
+  - debrisGlass_3
+  - debrisWood_2
+  - debrisStone_1
+  - debrisWood_3
+  - debrisGlass_1
+  m_RenderDataMap: {}
+  m_Tag: DebrisAtlas
+  m_IsVariant: 0
