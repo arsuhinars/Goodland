@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19771cd08d335474a87fd237bba8cf65, type: 3}
+  m_Name: PlayerSettings
+  m_EditorClassIdentifier: 
+  flyImpulseFactor: 4
+  flyImpulsePeriod: 0.3
+  strafeForceFactor: 2
+  rotationSmoothTime: 0.2
+  flyingRotationAngle: 0
+  groundRaysCount: 1
+  maxGroundDistance: 0.75
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 1
+  scaleUpFactor: 1.25
+  scaleUpGravity: 1.125
+  scaleDownFactor: 0.8
+  scaleDownGravity: 0.75
