@@ -12,12 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 973275a4da3d866438d7cd3927ff0c6d, type: 3}
   m_Name: WoodFallingObstacleSettings
   m_EditorClassIdentifier: 
-  rotationSpeed: 0
   playerTag: Player
-  harmPlayer: 1
-  fallAbovePlayer: 1
-  isBreakable: 1
+  minKillingVelocity: 7
   minBreakVelocity: 7
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
