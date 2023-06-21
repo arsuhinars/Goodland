@@ -1,0 +1,37 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <TransitionElement transition-name="popup" class="main-container center-items">
+        <ui:VisualElement class="container menu-container">
+            <ui:VisualElement class="bottom-border">
+                <ReactiveElement template-text="{{ t.pause_label }}">
+                    <ui:Label text="Pause" enable-rich-text="false" class="primary-text" style="-unity-text-align: middle-center;" />
+                </ReactiveElement>
+            </ui:VisualElement>
+            <ui:VisualElement class="grid" style="margin-top: 16px; margin-bottom: 16px;">
+                <ui:VisualElement class="grid-col">
+                    <ReactiveElement template-text="{{ t.score }}">
+                        <ui:Label text="Score" enable-rich-text="false" />
+                    </ReactiveElement>
+                    <ReactiveElement template-text="{{ t.record }}">
+                        <ui:Label text="Record" enable-rich-text="false" />
+                    </ReactiveElement>
+                </ui:VisualElement>
+                <ui:VisualElement class="grid-col">
+                    <ReactiveElement template-text="{{ s.score }}">
+                        <ui:Label text="500" enable-rich-text="false" />
+                    </ReactiveElement>
+                    <ReactiveElement template-text="{{ s.record }}">
+                        <ui:Label text="1000" enable-rich-text="false" />
+                    </ReactiveElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement>
+                <ReactiveElement template-text="{{ t.continue }}">
+                    <ActionButton action-name="Resume" text="Continue" enable-rich-text="false" class="btn primary-btn" />
+                </ReactiveElement>
+                <ReactiveElement template-text="{{ t.exit }}">
+                    <ActionButton action-name="Exit" text="Exit" enable-rich-text="false" class="btn secondary-btn" />
+                </ReactiveElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </TransitionElement>
+</ui:UXML>

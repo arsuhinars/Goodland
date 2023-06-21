@@ -1,0 +1,19 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Styles/Game.uss?fileID=7433441132597879392&amp;guid=6c7634ea25a07f64f9eb653d833acab4&amp;type=3#Game" />
+    <TransitionElement transition-name="fade" class="main-container">
+        <ui:VisualElement style="flex-direction: row; align-items: center;">
+            <ui:VisualElement class="container game-container" style="flex-direction: row;">
+                <ReactiveElement template-text="{{ t.score }}">
+                    <ui:Label text="Score" enable-rich-text="false" style="flex-grow: 1;" />
+                </ReactiveElement>
+                <ReactiveElement template-text="{{ s.score }}">
+                    <ui:Label text="500" enable-rich-text="false" class="h1" />
+                </ReactiveElement>
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 1;" />
+            <ui:Button enable-rich-text="false" class="game-btn">
+                <ui:VisualElement style="background-image: url(&apos;project://database/Assets/UI/Icons/PauseFill.png?fileID=21300000&amp;guid=69691129d3c23684bab808d65f9d00c0&amp;type=3#PauseFill&apos;);" />
+            </ui:Button>
+        </ui:VisualElement>
+    </TransitionElement>
+</ui:UXML>
