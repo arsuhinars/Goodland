@@ -13,7 +13,5 @@ MonoBehaviour:
   m_Name: StoneFallingObstacleSettings
   m_EditorClassIdentifier: 
   playerTag: Player
+  minKillingVelocity: 7
   minBreakVelocity: 10
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 4294967295

@@ -15,3 +15,5 @@ MonoBehaviour:
   initialPos: {x: 0, y: 4.5, z: -1}
   moveSpeed: 0.8
   startGameDelay: 4
+  playerTag: Player
+  killThreshold: 1

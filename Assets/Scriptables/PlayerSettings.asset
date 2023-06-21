@@ -18,11 +18,11 @@ MonoBehaviour:
   rotationSmoothTime: 0.2
   flyingRotationAngle: 0
   groundRaysCount: 1
-  maxGroundDistance: 0.75
+  maxGroundDistance: 0.6
   groundMask:
     serializedVersion: 2
     m_Bits: 1
-  scaleUpFactor: 1.25
+  scaleUpFactor: 1.125
   scaleUpGravity: 1.125
   scaleDownFactor: 0.8
   scaleDownGravity: 0.75
