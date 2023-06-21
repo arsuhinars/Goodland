@@ -12,18 +12,12 @@ public class BreakableObstacleEntity : MonoBehaviour, ISpawnable
     private PlayerEntity m_touchingPlayer;
     private Vector3 m_initialPos;
     private Quaternion m_initialRot;
+    private float m_sqrKillVel;
     private float m_sqrBreakVel;
     private bool m_isAlive = false;
 
     public void Spawn()
     {
-        if (m_isAlive)
-        {
-            return;
-        }
-
-        gameObject.SetActive(true);
-
         for (int i = 0; i < m_colliders.Length; ++i)
         {
             m_colliders[i].enabled = true;
@@ -40,14 +34,14 @@ public class BreakableObstacleEntity : MonoBehaviour, ISpawnable
 
     public void Kill()
     {
-        if (!m_isAlive)
-        {
-            return;
-        }
-
         for (int i = 0; i < m_colliders.Length; ++i)
         {
             m_colliders[i].enabled = false;
+        }
+
+        if (!m_rb.isKinematic)
+        {
+            m_destroyParticles.Play();
         }
 
         m_isAlive = false;
@@ -55,9 +49,6 @@ public class BreakableObstacleEntity : MonoBehaviour, ISpawnable
         m_rb.isKinematic = true;
         m_rb.velocity = Vector2.zero;
         m_rb.angularVelocity = 0f;
-        m_destroyParticles.Play();
-
-        gameObject.SetActive(false);
     }
 
     public void Drop()
@@ -68,30 +59,33 @@ public class BreakableObstacleEntity : MonoBehaviour, ISpawnable
     private void Awake()
     {
         m_rb = GetComponent<Rigidbody2D>();
+        m_sqrKillVel = Mathf.Pow(m_settings.minKillingVelocity, 2f);
         m_sqrBreakVel = Mathf.Pow(m_settings.minBreakVelocity, 2f);
         m_initialPos = transform.localPosition;
         m_initialRot = transform.localRotation;
         m_colliders = new Collider2D[m_rb.attachedColliderCount];
         m_rb.GetAttachedColliders(m_colliders);
     }
-
-    private void Start()
+    
+    private void Update()
     {
-        Spawn();
+        if (!m_isAlive && !m_destroyParticles.isPlaying)
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (Utils.LayerMaskContainsLayer(m_settings.groundMask, collision.gameObject.layer) &&
-            collision.relativeVelocity.sqrMagnitude > m_sqrBreakVel
-        ) {
+        if (collision.relativeVelocity.sqrMagnitude > m_sqrBreakVel)
+        {
             Kill();
         }
 
         if (collision.gameObject.CompareTag(m_settings.playerTag))
         {
             m_touchingPlayer = collision.gameObject.GetComponent<PlayerEntity>();
-            CheckPlayerCollision();
+            CheckPlayerCollision(collision.relativeVelocity);
         }
     }
 
@@ -103,7 +97,7 @@ public class BreakableObstacleEntity : MonoBehaviour, ISpawnable
             return;
         }
 
-        CheckPlayerCollision();
+        CheckPlayerCollision(collision.relativeVelocity);
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -123,16 +117,14 @@ public class BreakableObstacleEntity : MonoBehaviour, ISpawnable
         }
     }
 
-    private void CheckPlayerCollision()
+    private void CheckPlayerCollision(Vector2 relativeVelocity)
     {
-        if (m_touchingPlayer == null)
+        if (m_touchingPlayer == null || relativeVelocity.sqrMagnitude < m_sqrKillVel)
         {
             return;
         }
 
-        if (m_touchingPlayer.IsGrounded &&
-            m_touchingPlayer.transform.position.y < m_rb.position.y
-        )
+        if (m_touchingPlayer.transform.position.y < m_rb.position.y)
         {
             m_touchingPlayer.Kill();
         }

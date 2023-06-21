@@ -23,11 +23,6 @@ public class RotatableObstacleEntity : MonoBehaviour, ISpawnable
         m_rb = GetComponent<Rigidbody2D>();
     }
 
-    private void Start()
-    {
-        Spawn();
-    }
-
     private void FixedUpdate()
     {
         var deltaAngle = m_settings.rotationSpeed * Time.fixedDeltaTime;
@@ -36,10 +31,9 @@ public class RotatableObstacleEntity : MonoBehaviour, ISpawnable
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (m_settings.harmPlayer && collision.gameObject.CompareTag(m_settings.playerTag))
+        if (m_settings.doHarm)
         {
-            var player = collision.gameObject.GetComponent<PlayerEntity>();
-            player.Kill();
+            collision.gameObject.GetComponent<ISpawnable>()?.Kill();
         }
     }
 }

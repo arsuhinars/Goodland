@@ -8,6 +8,7 @@ public class CameraEntity : MonoBehaviour
 
     [SerializeField] private CameraSettings m_settings;
 
+    private BoxCollider2D m_collider;
     private Camera m_camera;
     private Bounds m_bounds;
     private float m_delayTimer;
@@ -15,6 +16,7 @@ public class CameraEntity : MonoBehaviour
     private void Awake()
     {
         m_camera = GetComponent<Camera>();
+        m_collider = GetComponent<BoxCollider2D>();
     }
 
     private void Start()
@@ -27,6 +29,9 @@ public class CameraEntity : MonoBehaviour
                 float.MaxValue
             )
         );
+
+        m_collider.size = new Vector2(m_bounds.size.x, m_bounds.size.y)
+            + Vector2.one * m_settings.killThreshold;
 
         GameManager.Instance.OnStart += OnGameStart;
     }
@@ -55,9 +60,18 @@ public class CameraEntity : MonoBehaviour
         m_bounds.center = transform.position;
     }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag(m_settings.playerTag))
+        {
+            collision.GetComponent<PlayerEntity>().Kill();
+        }
+    }
+
     private void OnGameStart()
     {
         m_delayTimer = m_settings.startGameDelay;
         transform.position = m_settings.initialPos;
+        m_bounds.center = m_settings.initialPos;
     }
 }

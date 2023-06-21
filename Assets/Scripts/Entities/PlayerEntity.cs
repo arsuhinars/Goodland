@@ -109,7 +109,7 @@ public class PlayerEntity : MonoBehaviour, ISpawnable
 
     private bool CheckIsGrounded()
     {
-        float scaledGroundDist = m_settings.maxGroundDistance * transform.localScale.x;
+        float scaledGroundDist = m_settings.maxGroundDistance * transform.localScale.y;
         float minDistance = float.MaxValue;
         for (int i = 0; i < m_groundRaysDirs.Length; ++i)
         {
