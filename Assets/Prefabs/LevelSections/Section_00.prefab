@@ -1855,6 +1855,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8827091934043074297}
     m_Modifications:
+    - target: {fileID: 2784821677293453658, guid: af5f90fbeb35f344a9a56e95a410af58, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 4175185245372661346, guid: af5f90fbeb35f344a9a56e95a410af58, type: 3}
       propertyPath: m_Name
       value: LeftTrap
@@ -2043,6 +2047,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6130661740081483612, guid: 33829b7035294684d957b1a9dc1e34ed, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7239316595351424098, guid: 33829b7035294684d957b1a9dc1e34ed, type: 3}
       propertyPath: m_spawnables.Array.size
       value: 2
@@ -2061,7 +2069,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7239316595351424098, guid: 33829b7035294684d957b1a9dc1e34ed, type: 3}
       propertyPath: m_spawnables.m_components.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7239316595351424098, guid: 33829b7035294684d957b1a9dc1e34ed, type: 3}
       propertyPath: m_spawnables.m_components.Array.data[0]
@@ -2083,8 +2091,23 @@ PrefabInstance:
       propertyPath: m_spawnables.m_components.Array.data[4]
       value: 
       objectReference: {fileID: 4628548250435566514}
+    - target: {fileID: 7239316595351424098, guid: 33829b7035294684d957b1a9dc1e34ed, type: 3}
+      propertyPath: m_spawnables.m_components.Array.data[5]
+      value: 
+      objectReference: {fileID: 1787301319930358410}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33829b7035294684d957b1a9dc1e34ed, type: 3}
+--- !u!114 &1787301319930358410 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8985727679361678202, guid: 33829b7035294684d957b1a9dc1e34ed, type: 3}
+  m_PrefabInstance: {fileID: 7241351299318829552}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f662cc00c535bd84b8532c98f3939e53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7210798289477610078 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 31406952898165678, guid: 33829b7035294684d957b1a9dc1e34ed, type: 3}
@@ -2126,6 +2149,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8827091934043074297}
     m_Modifications:
+    - target: {fileID: 2784821677293453658, guid: af5f90fbeb35f344a9a56e95a410af58, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 4175185245372661346, guid: af5f90fbeb35f344a9a56e95a410af58, type: 3}
       propertyPath: m_Name
       value: RightTrap
