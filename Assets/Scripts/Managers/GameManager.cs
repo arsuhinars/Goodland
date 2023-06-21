@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    private const string RECORD_PREFS_KEY = "record";
+
     public static GameManager Instance { get; private set; }
 
     public event Action OnStart;
@@ -13,13 +15,35 @@ public class GameManager : MonoBehaviour
 
     public bool IsStarted => m_isStarted;
     public bool IsPaused => m_isPaused;
+    public int Score
+    {
+        get => m_score;
+        private set
+        {
+            UIStateManager.Instance.State["score"] = value.ToString();
+            m_score = value;
+        }
+    }
+    public int Record => m_record;
+
     public CameraEntity Camera => m_camera;
+    public PlayerEntity Player => m_player;
 
     [SerializeField] private GameSettings m_settings;
 
     private bool m_isStarted = false;
     private bool m_isPaused = false;
+    private int m_score = 0;
+    private int m_record = 0;
+    private float m_initialPlayerOffset;
+    private float m_maxPlayerOffset;
     private CameraEntity m_camera;
+    private PlayerEntity m_player;
+
+    public enum GameEndReason
+    {
+        Finished, Died
+    }
 
     public void StartGame()
     {
@@ -30,7 +54,12 @@ public class GameManager : MonoBehaviour
 
         m_isPaused = false;
         m_isStarted = true;
+        Score = 0;
+        UpdateRecord();
         OnStart?.Invoke();
+
+        m_initialPlayerOffset = Player.transform.position.x;
+        m_maxPlayerOffset = 0f;
     }
 
     public void EndGame(GameEndReason reason)
@@ -40,6 +69,7 @@ public class GameManager : MonoBehaviour
             return;
         }
 
+        UpdateRecord();
         m_isPaused = false;
         m_isStarted = false;
         OnEnd?.Invoke(reason);
@@ -82,6 +112,7 @@ public class GameManager : MonoBehaviour
         }
 
         m_camera = FindObjectOfType<CameraEntity>();
+        m_player = FindObjectOfType<PlayerEntity>();
     }
 
     private IEnumerator Start()
@@ -98,8 +129,26 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public enum GameEndReason
+    private void Update()
     {
-        Finished, Died
+        if (IsStarted)
+        {
+            float offset = Player.transform.position.x - m_initialPlayerOffset;
+            m_maxPlayerOffset = Mathf.Max(m_maxPlayerOffset, offset);
+            Score = Mathf.FloorToInt(m_maxPlayerOffset * m_settings.scorePerUnit);
+        }
+    }
+
+    private void UpdateRecord()
+    {
+        m_record = PlayerPrefs.GetInt(RECORD_PREFS_KEY, 0);
+
+        if (m_score > m_record)
+        {
+            m_record = m_score;
+            PlayerPrefs.SetInt(RECORD_PREFS_KEY, m_record);
+        }
+
+        UIStateManager.Instance.State["record"] = m_record.ToString();
     }
 }
