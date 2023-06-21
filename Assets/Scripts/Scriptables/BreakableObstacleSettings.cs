@@ -4,6 +4,6 @@
 public class BreakableObstacleSettings : ScriptableObject
 {
     public string playerTag;
+    public float minKillingVelocity = 0f;
     public float minBreakVelocity = 0f;
-    public LayerMask groundMask;
 }

@@ -5,5 +5,5 @@ public class RotatableObstacleSettings : ScriptableObject
 {
     public float rotationSpeed = 1f;
     public string playerTag;
-    public bool harmPlayer = false;
+    public bool doHarm = false;
 }

@@ -3,5 +3,5 @@
 [CreateAssetMenu(fileName = "GameSettings", menuName = "Game/Game Settings")]
 public class GameSettings : ScriptableObject
 {
-
+    public float scorePerUnit;
 }
