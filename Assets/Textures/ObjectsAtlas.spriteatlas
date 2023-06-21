@@ -15,7 +15,7 @@ SpriteAtlas:
       compressionQuality: 50
       maxTextureSize: 2048
       textureCompression: 0
-      filterMode: 1
+      filterMode: 2
       generateMipMaps: 0
       readable: 0
       crunchedCompression: 0
@@ -36,6 +36,16 @@ SpriteAtlas:
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - 27f12bb07edef0742889d19bc8b6e382: 21300000
+    - a520d3619fe2a2045a9732e5a1217b71: 21300000
+    - daa0ab12ac66a4340a940f6bfc165fa1: 21300000
+    - 0c9c7462a4358c34db47d33a612618fc: 21300000
+    - cb12eb85e3416974ca1074f98e37643d: 21300000
+    - ca71c577bb323f7438136d290e3af1ca: 21300000
+    - ed60a29762883894ea342bc79250ab46: 21300000
+    - 5c3bf5eafb5be6c45b4e846ae59fb276: 21300000
+    - 01be4eee1f9ed074b8b99c7005a54cb1: 21300000
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 27f12bb07edef0742889d19bc8b6e382, type: 3}
