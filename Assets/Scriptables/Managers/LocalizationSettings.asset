@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9d1b1e578ef6764da768782ea29caf4, type: 3}
   m_Name: LocalizationSettings
   m_EditorClassIdentifier: 
-  fallbackLocale: 29
+  fallbackLocale: 10
   localesResourcesPath: Localization/
