@@ -81,4 +81,5 @@ MonoBehaviour:
   - key: help__authors
     value: "\u0410\u0432\u0442\u043E\u0440\u044B"
   - key: help__authors_descr
-    value: "arsuhinars\\n\\n<b>\u0410\u0441\u0441\u0435\u0442\u044B \u0438 \u043F\u043B\u0430\u0433\u0438\u043D\u044B</b>\\nKenney.nl\\nDemigiant"
+    value: "arsuhinars\\n\\n<b>\u0410\u0441\u0441\u0435\u0442\u044B \u0438 \u043F\u043B\u0430\u0433\u0438\u043D\u044B</b>\\nKenney.nl\\nDemigiant\\nMusic
+      by: Jordan Ottesen (jottesen.itch.io)"
