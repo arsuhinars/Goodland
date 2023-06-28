@@ -1,0 +1,31 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <TransitionElement transition-name="popup" class="main-container center-items">
+        <ui:VisualElement class="container menu-container">
+            <ReactiveElement template-text="{{ t.game_title }}" class="bottom-border">
+                <ui:Label text="Goodland" enable-rich-text="false" class="text-strong text-h1" style="-unity-text-align: middle-center;" />
+            </ReactiveElement>
+            <ui:VisualElement class="grid mt-1" style="flex-direction: row;">
+                <ReactiveElement template-text="{{ t.record }}" class="grid-col">
+                    <ui:Label text="Record" enable-rich-text="false" />
+                </ReactiveElement>
+                <ReactiveElement template-text="{{ s.record }}" class="grid-col">
+                    <ui:Label text="1000" enable-rich-text="false" class="text-strong" />
+                </ReactiveElement>
+            </ui:VisualElement>
+            <ReactiveElement template-text="{{ t.play }}" class="mt-1">
+                <ActionButton text="Play" enable-rich-text="false" action-name="Play" class="btn primary-btn" />
+            </ReactiveElement>
+            <ui:VisualElement class="mt-1" style="flex-direction: row; justify-content: space-around;">
+                <ActionButton enable-rich-text="false" action-name="Exit" class="btn primary-btn">
+                    <ui:VisualElement class="btn-icon" style="background-image: url(&apos;project://database/Assets/UI/Icons/ExitLeft.png?fileID=21300000&amp;guid=bb2065e144263c444a377058883b5cc8&amp;type=3#ExitLeft&apos;);" />
+                </ActionButton>
+                <NavigationButton enable-rich-text="false" view-name="Help" class="btn primary-btn">
+                    <ui:VisualElement class="btn-icon" style="background-image: url(&apos;project://database/Assets/UI/Icons/Question.png?fileID=21300000&amp;guid=ed82a5125c196d444bcd1d07b3e720fc&amp;type=3#Question&apos;);" />
+                </NavigationButton>
+                <NavigationButton enable-rich-text="false" view-name="Options" class="btn primary-btn">
+                    <ui:VisualElement class="btn-icon" style="background-image: url(&apos;project://database/Assets/UI/Icons/Gear.png?fileID=21300000&amp;guid=416c6f8be8828b448a8598ddba10061e&amp;type=3#Gear&apos;);" />
+                </NavigationButton>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </TransitionElement>
+</ui:UXML>

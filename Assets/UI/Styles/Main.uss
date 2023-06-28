@@ -1,157 +1,29 @@
 :root {
     --primary-color: #778BEB;
+    --primary-highlight-color: #97A4E8;
     --primary-dark-color: #546DE5;
     --primary-text-color: #FFFFFF;
+
     --secondary-color: #786FA6;
+    --secondary-highlight-color: #8A85A4;
     --secondary-dark-color: #574B90;
     --secondary-text-color: #FFFFFF;
+
     --dark-color: rgba(56, 56, 56, 0.75);
     --dark-highlight-color: rgba(91, 91, 91, 0.75);
     --dark-active-color: rgba(54, 54, 54, 0.83);
 
     color: rgb(255, 255, 255);
-    -unity-font: resource('Fonts & Materials/Roboto-Medium');
-    -unity-font-definition: resource('Fonts & Materials/Roboto-Medium SDF');
+    -unity-font-definition: resource('Fonts & Materials/Roboto-Regular SDF');
     -unity-font-style: normal;
     -unity-text-align: middle-left;
     
     font-size: 30px;
 }
 
-.h1 {
-    font-size: 40px;
-}
-
 .bottom-border {
     border-bottom-width: 6px;
     border-color: var(--primary-color);
-}
-
-.btn {
-    border-left-width: 0px;
-    border-right-width: 0px;
-    border-top-width: 0px;
-    border-bottom-width: 4px;
-    border-radius: 18px;
-    font-size: 24px;
-    transition-duration: 0.2s;
-    margin-top: 2px;
-    margin-bottom: 12px;
-    padding: 4px;
-}
-
-.btn:hover {
-    border-bottom-width: 6px;
-    margin-top: 0px;
-}
-
-.btn:active {
-    border-bottom-width: 0;
-    margin-top: 6px;
-}
-
-.game-btn {
-    background-color: var(--dark-color);
-    border-radius: 24px;
-    padding: 16px;
-    border-width: 0;
-    transition-duration: 0.3s;
-}
-
-.game-btn:hover {
-    background-color: var(--dark-highlight-color);
-    translate: 0 -6px;
-}
-
-.game-btn:active {
-    background-color: var(--dark-active-color);
-    translate: 0 0;
-}
-
-.game-btn > VisualElement {
-    width: 48px;
-    height: 48px;
-}
-
-.primary-btn, .primary-btn:hover, .primary-btn:active, .primary-btn:focus {
-    background-color: var(--primary-color);
-    color: var(--primary-text-color);
-    border-color: var(--primary-dark-color);
-}
-
-.secondary-btn, .secondary-btn:hover, .secondary-btn:active, .secondary-btn:focus {
-    background-color: var(--secondary-color);
-    color: var(--secondary-text-color);
-    border-color: var(--secondary-dark-color);
-}
-
-.main-container {
-    flex-grow: 1;
-    padding-left: 32px;
-    padding-right: 32px;
-    padding-top: 16px;
-    padding-bottom: 16px;
-}
-
-.container {
-    background-color: var(--dark-color);
-    border-radius: 24px;
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-}
-
-.menu-container {
-    min-width: 400px;
-    align-items: stretch;
-    justify-content: space-between;
-}
-
-.game-container {
-    background-color: var(--dark-color);
-}
-
-.grid {
-    flex-direction: row;
-}
-
-.grid-col {
-    flex-direction: column;
-    justify-content: center;
-    -unity-text-align: middle-center;
-    flex-grow: 1;
-}
-
-.center-items {
-    align-items: center;
-    justify-content: center;
-}
-
-.fade-enter-active, .fade-leave-active {
-    transition-duration: 0.2s;
-}
-
-.fade-enter-from, .fade-leave-to {
-    opacity: 0;
-}
-
-.fade-enter-to, .fade-leave-from {
-    opacity: 1;
-}
-
-.popup-enter-active, .popup-leave-active {
-    transition-duration: 0.3s;
-}
-
-.popup-enter-from, .popup-leave-to {
-    opacity: 0;
-    scale: 0.95;
-}
-
-.popup-enter-to, .popup-leave-from {
-    opacity: 1;
-    scale: 1;
 }
 
 .view {

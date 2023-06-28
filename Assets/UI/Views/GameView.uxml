@@ -1,19 +1,33 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI/Styles/Game.uss?fileID=7433441132597879392&amp;guid=6c7634ea25a07f64f9eb653d833acab4&amp;type=3#Game" />
-    <TransitionElement transition-name="fade" class="main-container">
-        <ui:VisualElement style="flex-direction: row; align-items: center;">
+    <Style src="project://database/Assets/UI/Styles/GameView.uss?fileID=7433441132597879392&amp;guid=e535002b002dd0c47a2c4e54d0081670&amp;type=3#GameView" />
+    <TransitionElement transition-name="fade" class="main-container" style="justify-content: space-between;">
+        <ui:VisualElement class="game-view__row">
             <ui:VisualElement class="container game-container" style="flex-direction: row;">
                 <ReactiveElement template-text="{{ t.score }}">
                     <ui:Label text="Score" enable-rich-text="false" style="flex-grow: 1;" />
                 </ReactiveElement>
                 <ReactiveElement template-text="{{ s.score }}">
-                    <ui:Label text="500" enable-rich-text="false" class="h1" />
+                    <ui:Label text="500" enable-rich-text="false" class="text-strong" />
                 </ReactiveElement>
             </ui:VisualElement>
-            <ui:VisualElement style="flex-grow: 1;" />
-            <ui:Button enable-rich-text="false" class="game-btn">
-                <ui:VisualElement style="background-image: url(&apos;project://database/Assets/UI/Icons/PauseFill.png?fileID=21300000&amp;guid=69691129d3c23684bab808d65f9d00c0&amp;type=3#PauseFill&apos;);" />
+            <ui:Button enable-rich-text="false" tabindex="-1" name="pauseButton" class="game-view__btn">
+                <ui:VisualElement style="background-image: url(&apos;project://database/Assets/UI/Icons/Pause.png?fileID=21300000&amp;guid=4873fc0095859c248899ba4b6c56e6a9&amp;type=3#Pause&apos;);" />
             </ui:Button>
+        </ui:VisualElement>
+        <ui:VisualElement class="game-view__row" style="margin-bottom: 32px;">
+            <ui:VisualElement class="game-view__row">
+                <ui:Button tabindex="-1" name="leftButton" class="game-view__input-control">
+                    <ui:VisualElement style="background-image: url(&apos;project://database/Assets/UI/Icons/ArrowLeft.png?fileID=21300000&amp;guid=bf1837370ee1b0b42b3a4b80e6f7d981&amp;type=3#ArrowLeft&apos;);" />
+                </ui:Button>
+                <ui:Button tabindex="-1" name="rightButton" class="game-view__input-control" style="margin-left: 32px;">
+                    <ui:VisualElement style="background-image: url(&apos;project://database/Assets/UI/Icons/ArrowRight.png?fileID=21300000&amp;guid=c1275a19b5045314587e2edc9a0d3e12&amp;type=3#ArrowRight&apos;);" />
+                </ui:Button>
+            </ui:VisualElement>
+            <ui:VisualElement class="game-view__row">
+                <ui:Button tabindex="-1" name="upButton" class="game-view__input-control">
+                    <ui:VisualElement style="background-image: url(&apos;project://database/Assets/UI/Icons/ArrowUp.png?fileID=21300000&amp;guid=58faed3aaf70c574fbb147cc29612d38&amp;type=3#ArrowUp&apos;);" />
+                </ui:Button>
+            </ui:VisualElement>
         </ui:VisualElement>
     </TransitionElement>
 </ui:UXML>

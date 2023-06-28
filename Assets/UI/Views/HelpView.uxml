@@ -1,0 +1,82 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Styles/HelpView.uss?fileID=7433441132597879392&amp;guid=a42bc02631cb0ae40b732a94449aa190&amp;type=3#HelpView" />
+    <TransitionElement transition-name="popup" class="main-container center-items">
+        <ui:VisualElement class="container menu-container">
+            <ReactiveElement template-text="{{ t.help_title }}" class="bottom-border">
+                <ui:Label text="About game" enable-rich-text="false" class="text-strong" style="-unity-text-align: middle-center;" />
+            </ReactiveElement>
+            <ui:ScrollView scroll-deceleration-rate="0,135" elasticity="0.31" touch-scroll-type="Elastic" class="mt-1 scroll-view" style="height: 300px;">
+                <ReactiveElement template-text="{{ t.help__controls }}">
+                    <ui:Label text="Controls" enable-rich-text="false" class="help-view__title" />
+                </ReactiveElement>
+                <ui:VisualElement class="grid mt-1">
+                    <ui:VisualElement class="grid-col" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                        <ReactiveElement template-text="{{ t.help__fly_controls }}">
+                            <ui:Label text="W, Arrow up, Space" enable-rich-text="false" class="help-view__controls-text" />
+                        </ReactiveElement>
+                        <ReactiveElement template-text="{{ t.help__move_controls }}">
+                            <ui:Label text="A/D, Arrow left/right" enable-rich-text="false" class="help-view__controls-text" />
+                        </ReactiveElement>
+                        <ReactiveElement template-text="{{ t.help__pause_controls }}">
+                            <ui:Label text="Escape" enable-rich-text="false" class="help-view__controls-text" />
+                        </ReactiveElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="grid-col" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                        <ReactiveElement template-text="{{ t.help__fly_descr }}">
+                            <ui:Label tabindex="-1" text="Flying" display-tooltip-when-elided="true" class="help-view__controls-description" />
+                        </ReactiveElement>
+                        <ReactiveElement template-text="{{ t.help__move_descr }}">
+                            <ui:Label tabindex="-1" text="Movement" display-tooltip-when-elided="true" class="help-view__controls-description" />
+                        </ReactiveElement>
+                        <ReactiveElement template-text="{{ t.help__pause_descr }}">
+                            <ui:Label tabindex="-1" text="Pause" display-tooltip-when-elided="true" class="help-view__controls-description" />
+                        </ReactiveElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ReactiveElement template-text="{{ t.help__mechanics }}">
+                    <ui:Label text="Mechanics" enable-rich-text="false" class="help-view__title mt-1" />
+                </ReactiveElement>
+                <ReactiveElement template-text="{{ t.help__boxes }}">
+                    <ui:Label text="Boxes" enable-rich-text="false" class="help-view__subtitle" />
+                </ReactiveElement>
+                <ui:VisualElement class="help-view__image-container">
+                    <ui:VisualElement class="help-view__image" style="background-image: url(&apos;project://database/Assets/UI/Images/CartboardBoxTrap.png?fileID=21300000&amp;guid=20f7f41fffff71d448ead2848efcb6d9&amp;type=3#CartboardBoxTrap&apos;);" />
+                    <ui:VisualElement class="help-view__image" style="background-image: url(&apos;project://database/Assets/UI/Images/StoneBoxTrap.png?fileID=21300000&amp;guid=1fea94e3511fcef448fcd5fedf8aaa0f&amp;type=3#StoneBoxTrap&apos;);" />
+                </ui:VisualElement>
+                <ReactiveElement template-text="{{ t.help__boxes_descr }}">
+                    <ui:Label text="It breaks on fall and&#10;may kill player." enable-rich-text="false" class="help-view__text" />
+                </ReactiveElement>
+                <ReactiveElement template-text="{{ t.help__gears }}">
+                    <ui:Label text="Gears" enable-rich-text="false" class="help-view__subtitle mt-1" />
+                </ReactiveElement>
+                <ui:VisualElement class="help-view__image-container">
+                    <ui:VisualElement class="help-view__image" style="background-image: url(&apos;project://database/Assets/UI/Images/GearTrap.png?fileID=21300000&amp;guid=73c71d2d14ac4fb4c8ea1a3863298cae&amp;type=3#GearTrap&apos;);" />
+                    <ui:VisualElement class="help-view__image" style="background-image: url(&apos;project://database/Assets/UI/Images/SpikesTrap.png?fileID=21300000&amp;guid=97ad2c7a20833ae4e8f228659e09662c&amp;type=3#SpikesTrap&apos;);" />
+                </ui:VisualElement>
+                <ReactiveElement template-text="{{ t.help__gears_descr }}">
+                    <ui:Label enable-rich-text="false" text="Gears are rotating and one&#10;with spikes is dangerous." class="help-view__text" />
+                </ReactiveElement>
+                <ReactiveElement template-text="{{ t.help__powerups }}">
+                    <ui:Label text="Powerups" enable-rich-text="false" class="help-view__subtitle mt-1" />
+                </ReactiveElement>
+                <ui:VisualElement class="help-view__image-container">
+                    <ui:VisualElement class="help-view__small-image" style="background-image: url(&apos;project://database/Assets/UI/Images/ScaleDownPowerUp.png?fileID=21300000&amp;guid=01c8920976664574ca5ee776a5278243&amp;type=3#ScaleDownPowerUp&apos;);" />
+                    <ui:VisualElement class="help-view__small-image" style="background-image: url(&apos;project://database/Assets/UI/Images/ScaleUpPowerUp.png?fileID=21300000&amp;guid=65c4a0bd3bb579148945280298e5370e&amp;type=3#ScaleUpPowerUp&apos;);" />
+                    <ui:VisualElement class="help-view__small-image" style="background-image: url(&apos;project://database/Assets/UI/Images/ResetPowerUp.png?fileID=21300000&amp;guid=bd7c2a3d3259a834b815ae65f3d7f847&amp;type=3#ResetPowerUp&apos;);" />
+                </ui:VisualElement>
+                <ReactiveElement template-text="{{ t.help__powerups_descr }}">
+                    <ui:Label enable-rich-text="false" text="Powerups for decreasing,&#10;increasing and reseting player&#10;size." class="help-view__text" />
+                </ReactiveElement>
+                <ReactiveElement template-text="{{ t.help__authors }}">
+                    <ui:Label text="Authors" enable-rich-text="false" class="help-view__title mt-1" />
+                </ReactiveElement>
+                <ReactiveElement template-text="{{ t.help__authors_descr }}">
+                    <ui:Label enable-rich-text="true" text="arsuhinars&#10;&#10;&lt;b&gt;Assets and plugins from:&lt;/b&gt;&#10;Kenney.nl&#10;Demigiant" class="help-view__text" />
+                </ReactiveElement>
+            </ui:ScrollView>
+            <ReactiveElement template-text="{{ t.go_back }}" class="mt-1">
+                <NavigationButton text="Go back" enable-rich-text="false" view-name="Main" class="btn primary-btn" />
+            </ReactiveElement>
+        </ui:VisualElement>
+    </TransitionElement>
+</ui:UXML>

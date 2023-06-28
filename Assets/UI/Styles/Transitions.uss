@@ -1,0 +1,32 @@
+
+.fade-enter-active, .fade-leave-active {
+    transition-property: opacity;
+    transition-duration: 0.2s, 0.2s;
+}
+
+.fade-enter-from, .fade-leave-to {
+    opacity: 0;
+}
+
+.fade-enter-to, .fade-leave-from {
+    opacity: 1;
+}
+
+.popup-enter-active, .popup-leave-active {
+    transition-property: opacity, scale;
+    transition-duration: 0.2s, 0.2s;
+}
+
+.popup-enter-active {
+    transition-delay: 0.1s, 0.1s;
+}
+
+.popup-enter-from, .popup-leave-to {
+    opacity: 0;
+    scale: 0.95;
+}
+
+.popup-enter-to, .popup-leave-from {
+    opacity: 1;
+    scale: 1;
+}

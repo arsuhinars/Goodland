@@ -1,0 +1,28 @@
+
+.text-strong {
+    -unity-font-definition: resource('Fonts & Materials/Roboto-Medium SDF');
+}
+
+.text-h1 {
+    font-size: 50px;
+}
+
+.grid {
+    flex-direction: row;
+}
+
+.grid-col {
+    flex-direction: column;
+    justify-content: center;
+    -unity-text-align: middle-center;
+    flex-grow: 1;
+}
+
+.center-items {
+    align-items: center;
+    justify-content: center;
+}
+
+.mt-1 {
+    margin-top: 16px;
+}

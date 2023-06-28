@@ -1,0 +1,39 @@
+.help-view__title {
+    -unity-text-align: middle-center;
+    -unity-font-style: bold;
+}
+
+.help-view__text {
+    font-size: 20px;
+    -unity-text-align: middle-center;
+}
+
+.help-view__controls-text {
+    -unity-font-style: bold;
+    font-size: 20px;
+}
+
+.help-view__controls-description {
+    font-size: 20px;
+    -unity-text-align: middle-center;
+}
+
+.help-view__image {
+    width: 150px;
+    height: 150px;
+}
+
+.help-view__image-container {
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.help-view__subtitle {
+    -unity-text-align: middle-center;
+    font-size: 30px;
+}
+
+.help-view__small-image {
+    width: 90px;
+    height: 90px;
+}

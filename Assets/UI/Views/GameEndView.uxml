@@ -2,8 +2,8 @@
     <TransitionElement transition-name="popup" class="main-container center-items">
         <ui:VisualElement class="container menu-container">
             <ui:VisualElement class="bottom-border">
-                <ReactiveElement template-text="{{ t.game_end_label }}">
-                    <ui:Label text="You&apos;ve loosed" enable-rich-text="false" class="primary-text" style="-unity-text-align: middle-center;" />
+                <ReactiveElement template-text="{{ t.game_end_title }}">
+                    <ui:Label text="You&apos;ve loosed" enable-rich-text="false" class="text-strong" style="-unity-text-align: middle-center;" />
                 </ReactiveElement>
             </ui:VisualElement>
             <ui:VisualElement class="grid" style="margin-top: 16px; margin-bottom: 16px;">
@@ -15,7 +15,7 @@
                         <ui:Label text="Record" enable-rich-text="false" />
                     </ReactiveElement>
                 </ui:VisualElement>
-                <ui:VisualElement class="grid-col">
+                <ui:VisualElement class="grid-col text-strong">
                     <ReactiveElement template-text="{{ s.score }}">
                         <ui:Label text="500" enable-rich-text="false" />
                     </ReactiveElement>
@@ -28,8 +28,8 @@
                 <ReactiveElement template-text="{{ t.play_again }}">
                     <ActionButton action-name="PlayAgain" text="Play again" enable-rich-text="false" class="btn primary-btn" />
                 </ReactiveElement>
-                <ReactiveElement template-text="{{ t.exit }}">
-                    <ActionButton action-name="Exit" text="Exit" enable-rich-text="false" class="btn secondary-btn" />
+                <ReactiveElement template-text="{{ t.leave }}">
+                    <ActionButton action-name="Leave" text="Leave" enable-rich-text="false" class="btn secondary-btn" />
                 </ReactiveElement>
             </ui:VisualElement>
         </ui:VisualElement>

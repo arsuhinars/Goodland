@@ -1,0 +1,44 @@
+
+.toggle {
+    justify-content: space-between;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.toggle .unity-toggle__label {
+    flex-grow: 1;
+    -unity-text-align: middle-center;
+    color: var(--primary-text-color);
+}
+
+.toggle:focus .unity-toggle__label {
+    color: var(--primary-text-color);
+}
+
+.toggle .unity-toggle__input {
+    flex-grow: 0;
+    flex-basis: auto;
+}
+
+.toggle .unity-toggle__checkmark {
+    width: 36px;
+    height: 36px;
+    background-color: var(--primary-color);
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0);
+    border-radius: 9px;
+    border-width: 0;
+    transition-property: background-color, -unity-background-image-tint-color, scale;
+    transition-duration: 0.2s, 0.2s, 0.1s;
+}
+
+.toggle:hover .unity-toggle__checkmark {
+    background-color: var(--primary-highlight-color);
+}
+
+.toggle:active .unity-toggle__checkmark {
+    scale: 0.95;
+}
+
+.toggle:checked .unity-toggle__checkmark {
+    -unity-background-image-tint-color: rgba(255, 255, 255, 1);
+}

@@ -1,0 +1,40 @@
+
+.scroll-view .unity-scroll-view__content-container {
+    transition-property: translate;
+    transition-duration: 0.06s;
+}
+
+.scroll-view .unity-scroller, .scroll-view .unity-scroller__slider {
+    width: 8px;
+    min-width: 8px;
+}
+
+.scroll-view .unity-scroller__low-button, .scroll-view .unity-scroller__high-button {
+    display: none;
+}
+
+.scroll-view .unity-scroller__slider {
+    margin: 0;
+}
+
+.scroll-view .unity-base-slider__dragger {
+    width: 8px;
+    left: 0;
+    background-color: var(--primary-color);
+    border-width: 0;
+    transition-property: translate, background-color;
+    transition-duration: 0.06s, 0.1s;
+}
+
+.scroll-view .unity-base-slider__dragger:hover, .scroll-view .unity-base-slider__dragger:focus {
+    background-color: var(--primary-highlight-color);
+}
+
+.scroll-view .unity-base-slider__tracker {
+    background-color: var(--dark-color);
+    border-width: 0;
+}
+
+.scroll-view .unity-base-slider__tracker:hover {
+    background-color: var(--dark-highlight-color);
+}

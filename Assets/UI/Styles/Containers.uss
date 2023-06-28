@@ -1,0 +1,27 @@
+
+.main-container {
+    flex-grow: 1;
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.container {
+    background-color: var(--dark-color);
+    border-radius: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.menu-container {
+    min-width: 400px;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.game-container {
+    background-color: var(--dark-color);
+}

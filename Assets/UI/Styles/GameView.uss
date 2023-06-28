@@ -1,0 +1,49 @@
+.game-view__btn {
+    background-color: var(--dark-color);
+    border-radius: 24px;
+    padding: 16px;
+    border-width: 0;
+    transition-duration: 0.3s;
+}
+
+.game-view__btn:hover {
+    background-color: var(--dark-highlight-color);
+    translate: 0 -6px;
+}
+
+.game-view__btn:active {
+    background-color: var(--dark-active-color);
+    translate: 0 0;
+}
+
+.game-view__btn > VisualElement {
+    width: 50px;
+    height: 50px;
+}
+
+.game-view__row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.game-view__input-control {
+    background-color: var(--dark-color);
+    border-radius: 60px;
+    padding: 12px;
+    border-width: 0;
+    transition-duration: 0.1s;
+}
+
+.game-view__input-control:hover {
+    background-color: var(--dark-highlight-color);
+}
+
+.game-view__input-control:active {
+    scale: 0.9;
+}
+
+.game-view__input-control > VisualElement {
+    width: 96px;
+    height: 96px;
+}
