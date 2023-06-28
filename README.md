@@ -16,3 +16,4 @@ decrease character size.
 * [Kenney - Physics Assets](https://www.kenney.nl/assets/physics-assets)
 * [Kenney - Game Icons](https://kenney.nl/assets/game-icons)
 * [DOTween](https://assetstore.unity.com/packages/tools/animation/dotween-hotween-v2-27676)
+* [Loopable Video Game Music (Volume 1)​​](https://jottesen.itch.io/loopable-video-game-music)
