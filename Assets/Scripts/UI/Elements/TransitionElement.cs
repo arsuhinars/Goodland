@@ -131,7 +131,7 @@ public class TransitionElement : VisualElement
         m_transitionState = TransitionState.NONE;
     }
 
-    private void OnTransitionEnds(TransitionEndEvent ev)
+    public void EndTransition()
     {
         switch (m_transitionState)
         {
@@ -145,5 +145,10 @@ public class TransitionElement : VisualElement
                 style.display = DisplayStyle.None;
                 break;
         }
+    }
+
+    private void OnTransitionEnds(TransitionEndEvent ev)
+    {
+        EndTransition();
     }
 }

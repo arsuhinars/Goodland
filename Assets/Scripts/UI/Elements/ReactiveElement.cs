@@ -17,6 +17,7 @@ public class ReactiveElement : VisualElement
                 yield return new UxmlChildElementDescription(typeof(TextElement));
                 yield return new UxmlChildElementDescription(typeof(Label));
                 yield return new UxmlChildElementDescription(typeof(Button));
+                yield return new UxmlChildElementDescription(typeof(Toggle));
             }
         }
 
@@ -64,7 +65,15 @@ public class ReactiveElement : VisualElement
         var childrenEnumerator = Children().GetEnumerator();
         childrenEnumerator.MoveNext();
 
-        m_textElement = childrenEnumerator.Current as TextElement;
+        var child = childrenEnumerator.Current;
+        if (child is Toggle)
+        {
+            m_textElement = (child as Toggle).labelElement;
+        }
+        else
+        {
+            m_textElement = childrenEnumerator.Current as TextElement;
+        }
     }
 
     private void OnStringUpdate()
