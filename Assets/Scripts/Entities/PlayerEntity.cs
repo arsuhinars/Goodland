@@ -18,6 +18,7 @@ public class PlayerEntity : MonoBehaviour, ISpawnable
 
     [SerializeField] private PlayerSettings m_settings;
 
+    private bool m_isAlive = false;
     private float m_flyFactor;
     private float m_strafeFactor;
     private bool m_isGrounded = false;
@@ -28,12 +29,15 @@ public class PlayerEntity : MonoBehaviour, ISpawnable
 
     public void Spawn()
     {
+        m_isAlive = true;
         transform.localScale = Vector3.one;
         m_rb.gravityScale = 1f;
+        m_rb.velocity = Vector2.zero;
     }
 
     public void Kill()
     {
+        m_isAlive = false;
         GameManager.Instance.EndGame(GameManager.GameEndReason.Died);
     }
 
@@ -75,7 +79,7 @@ public class PlayerEntity : MonoBehaviour, ISpawnable
 
     private void FixedUpdate()
     {
-        if (!GameManager.Instance.IsStarted)
+        if (!m_isAlive)
         {
             m_rb.freezeRotation = false;
             return;

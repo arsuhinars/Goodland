@@ -33,12 +33,19 @@ public class CameraEntity : MonoBehaviour
         m_collider.size = new Vector2(m_bounds.size.x, m_bounds.size.y)
             + Vector2.one * m_settings.killThreshold;
 
-        GameManager.Instance.OnStart += OnGameStart;
+        var gameManager = GameManager.Instance;
+        gameManager.OnEnterMenu += ResetState;
+        gameManager.OnStart += ResetState;
     }
 
     private void OnDestroy()
     {
-        GameManager.Instance.OnStart -= OnGameStart;
+        var gameManager = GameManager.Instance;
+        if (gameManager != null)
+        {
+            gameManager.OnEnterMenu -= ResetState;
+            gameManager.OnStart -= ResetState;
+        }
     }
 
     private void Update()
@@ -62,13 +69,16 @@ public class CameraEntity : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag(m_settings.playerTag))
-        {
+        var gameManager = GameManager.Instance;
+        if (gameManager != null
+            && gameManager.IsStarted
+            && collision.CompareTag(m_settings.playerTag)
+        ) {
             collision.GetComponent<PlayerEntity>().Kill();
         }
     }
 
-    private void OnGameStart()
+    private void ResetState()
     {
         m_delayTimer = m_settings.startGameDelay;
         transform.position = m_settings.initialPos;

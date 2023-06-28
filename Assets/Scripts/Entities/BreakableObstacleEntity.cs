@@ -14,7 +14,6 @@ public class BreakableObstacleEntity : MonoBehaviour, ISpawnable
     private Quaternion m_initialRot;
     private float m_sqrKillVel;
     private float m_sqrBreakVel;
-    private bool m_isAlive = false;
 
     public void Spawn()
     {
@@ -23,7 +22,6 @@ public class BreakableObstacleEntity : MonoBehaviour, ISpawnable
             m_colliders[i].enabled = true;
         }
 
-        m_isAlive = true;
         m_sprite.enabled = true;
         m_rb.isKinematic = true;
         m_rb.velocity = Vector2.zero;
@@ -44,7 +42,6 @@ public class BreakableObstacleEntity : MonoBehaviour, ISpawnable
             m_destroyParticles.Play();
         }
 
-        m_isAlive = false;
         m_sprite.enabled = false;
         m_rb.isKinematic = true;
         m_rb.velocity = Vector2.zero;
@@ -67,14 +64,6 @@ public class BreakableObstacleEntity : MonoBehaviour, ISpawnable
         m_rb.GetAttachedColliders(m_colliders);
     }
     
-    private void Update()
-    {
-        if (!m_isAlive && !m_destroyParticles.isPlaying)
-        {
-            gameObject.SetActive(false);
-        }
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.relativeVelocity.sqrMagnitude > m_sqrBreakVel)
