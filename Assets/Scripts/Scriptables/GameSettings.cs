@@ -4,4 +4,5 @@
 public class GameSettings : ScriptableObject
 {
     public float scorePerUnit;
+    public int fpsLimit = 30;
 }

@@ -54,4 +54,12 @@ public class UIActionsManager : MonoBehaviour
             return;
         }
     }
+
+    private void OnDestroy()
+    {
+        if (Instance == this)
+        {
+            Instance = null;
+        }
+    }
 }

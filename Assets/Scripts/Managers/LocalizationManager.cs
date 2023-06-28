@@ -44,6 +44,14 @@ public class LocalizationManager : MonoBehaviour
         LoadMessages();
     }
 
+    private void OnDestroy()
+    {
+        if (Instance == this)
+        {
+            Instance = null;
+        }
+    }
+
     private void LoadMessages()
     {
         var table = Resources.Load<LocalizationTable>(

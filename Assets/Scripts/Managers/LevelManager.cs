@@ -6,20 +6,16 @@ public class LevelManager : MonoBehaviour
 {
     [SerializeField] private LevelSettings m_settings;
     [SerializeField] private Transform m_sectionsParent;
-    [SerializeField] private LevelSection[] m_sectionsPrefabs;
-    [Space]
-    [SerializeField] private int m_initialSectionIndex;
-    [SerializeField] private int m_initialSectionsCount;
 
     private IObjectPool<LevelSection>[] m_sectionsPools;
     private LinkedList<LevelSection> m_activeSections = new();
-    //private LevelSection m_lastSection = null;
-    private int m_sectionsCounter;
 
     private void Awake()
     {
-        m_sectionsPools = new IObjectPool<LevelSection>[m_sectionsPrefabs.Length];
-        for (int i = 0; i < m_sectionsPrefabs.Length; i++)
+        m_sectionsPools = new IObjectPool<LevelSection>[
+            m_settings.sectionsPrefabs.Length
+        ];
+        for (int i = 0; i < m_settings.sectionsPrefabs.Length; i++)
         {
             int prefabIdx = i;
             m_sectionsPools[i] = new ObjectPool<LevelSection>(
@@ -33,12 +29,19 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
-        GameManager.Instance.OnStart += OnGameStart;
+        var gameManager = GameManager.Instance;
+        gameManager.OnEnterMenu += OnEnterMenu;
+        gameManager.OnStart += OnGameStart;
     }
 
     private void OnDestroy()
     {
-        GameManager.Instance.OnStart -= OnGameStart;
+        var gameManager = GameManager.Instance;
+        if (gameManager != null)
+        {
+            gameManager.OnEnterMenu -= OnEnterMenu;
+            gameManager.OnStart -= OnGameStart;
+        }
     }
 
     private void Update()
@@ -57,31 +60,44 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    private void OnEnterMenu()
+    {
+        ClearAllSections();
+    }
+
     private void OnGameStart()
     {
-        m_sectionsCounter = 0;
+        ClearAllSections();
 
+        var cameraBounds = GameManager.Instance.Camera.Bounds;
+        float playerOffset = GameManager.Instance.InitialPlayerOffset;
+
+        var lastSec = GetNextSection(m_settings.initialSectionIndex);
+        while (cameraBounds.Intersects(lastSec.Bounds)) {
+            int idxOverride = -1;
+
+            if (lastSec.Bounds.center.x < playerOffset)
+            {
+                idxOverride = m_settings.initialSectionIndex;
+            }
+
+            lastSec = GetNextSection(idxOverride);
+        }
+    }
+
+    private void ClearAllSections()
+    {
         while (m_activeSections.Count > 0)
         {
             var section = m_activeSections.First.Value;
             section.Pool.Release(section);
         }
-
-        var cameraBounds = GameManager.Instance.Camera.Bounds;
-
-        m_activeSections.Clear();
-        while(
-            m_activeSections.Count == 0 ||
-            cameraBounds.Intersects(m_activeSections.Last.Value.Bounds)
-        ) {
-            GetNextSection();
-        }
     }
 
-    private LevelSection GetNextSection()
+    private LevelSection GetNextSection(int prefabOverrideIdx = -1)
     {
-        int prefabIdx = m_sectionsCounter++ < m_initialSectionsCount
-            ? m_initialSectionIndex
+        int prefabIdx = prefabOverrideIdx >= 0
+            ? prefabOverrideIdx
             : Random.Range(0, m_sectionsPools.Length);
         return m_sectionsPools[prefabIdx].Get();
     }
@@ -89,7 +105,7 @@ public class LevelManager : MonoBehaviour
     private LevelSection CreatePoolItem(int prefabIdx)
     {
         var instance = Instantiate(
-            m_sectionsPrefabs[prefabIdx],
+            m_settings.sectionsPrefabs[prefabIdx],
             m_sectionsParent
         );
         instance.Pool = m_sectionsPools[prefabIdx];

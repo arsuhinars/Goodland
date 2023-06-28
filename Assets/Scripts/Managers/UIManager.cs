@@ -29,6 +29,14 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        if (Instance == this)
+        {
+            Instance = null;
+        }
+    }
+
     private IEnumerator NextFrameCoroutine(Action action)
     {
         yield return null;

@@ -2,19 +2,27 @@ using System;
 using System.Collections;
 using UnityEngine;
 
+public enum GameState
+{
+    None, InMenu, Started, Paused, Ended
+}
+
 public class GameManager : MonoBehaviour
 {
     private const string RECORD_PREFS_KEY = "record";
 
     public static GameManager Instance { get; private set; }
 
+    public event Action OnEnterMenu;
     public event Action OnStart;
     public event Action<GameEndReason> OnEnd;
     public event Action OnPause;
     public event Action OnResume;
 
-    public bool IsStarted => m_isStarted;
-    public bool IsPaused => m_isPaused;
+    public GameState State => m_state;
+    public bool IsInMenu => m_state == GameState.InMenu;
+    public bool IsStarted => m_state == GameState.Started || m_state == GameState.Paused;
+    public bool IsPaused => m_state == GameState.Paused;
     public int Score
     {
         get => m_score;
@@ -25,14 +33,13 @@ public class GameManager : MonoBehaviour
         }
     }
     public int Record => m_record;
-
+    public float InitialPlayerOffset => m_initialPlayerOffset;
     public CameraEntity Camera => m_camera;
     public PlayerEntity Player => m_player;
 
     [SerializeField] private GameSettings m_settings;
 
-    private bool m_isStarted = false;
-    private bool m_isPaused = false;
+    private GameState m_state = GameState.None;
     private int m_score = 0;
     private int m_record = 0;
     private float m_initialPlayerOffset;
@@ -45,17 +52,29 @@ public class GameManager : MonoBehaviour
         Finished, Died
     }
 
-    public void StartGame()
+    public void EnterMenu()
     {
-        if (m_isStarted)
+        if (IsInMenu)
         {
             return;
         }
 
-        m_isPaused = false;
-        m_isStarted = true;
+        m_state = GameState.InMenu;
+        UpdateRecord();
+        OnEnterMenu?.Invoke();
+    }
+
+    public void StartGame()
+    {
+        if (IsStarted)
+        {
+            return;
+        }
+
+        m_state = GameState.Started;
         Score = 0;
         UpdateRecord();
+        Time.timeScale = 1f;
         OnStart?.Invoke();
 
         m_initialPlayerOffset = Player.transform.position.x;
@@ -64,37 +83,36 @@ public class GameManager : MonoBehaviour
 
     public void EndGame(GameEndReason reason)
     {
-        if (!m_isStarted)
+        if (!IsStarted)
         {
             return;
         }
 
         UpdateRecord();
-        m_isPaused = false;
-        m_isStarted = false;
+        m_state = GameState.Ended;
         OnEnd?.Invoke(reason);
     }
 
     public void PauseGame()
     {
-        if (m_isPaused || !m_isStarted)
+        if (IsPaused || !IsStarted)
         {
             return;
         }
 
-        m_isPaused = true;
+        m_state = GameState.Paused;
         Time.timeScale = 0f;
         OnPause?.Invoke();
     }
 
     public void ResumeGame()
     {
-        if (!m_isPaused || !m_isStarted)
+        if (!IsPaused)
         {
             return;
         }
 
-        m_isPaused = false;
+        m_state = GameState.Started;
         Time.timeScale = 1f;
         OnResume?.Invoke();
     }
@@ -117,8 +135,11 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator Start()
     {
+        Application.targetFrameRate = m_settings.fpsLimit;
+
         yield return null;
-        StartGame();
+
+        EnterMenu();
     }
 
     private void OnDestroy()

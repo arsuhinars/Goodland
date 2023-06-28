@@ -21,4 +21,12 @@ public class UIStateManager : MonoBehaviour
             return;
         }
     }
+
+    private void OnDestroy()
+    {
+        if (Instance == this)
+        {
+            Instance = null;
+        }
+    }
 }

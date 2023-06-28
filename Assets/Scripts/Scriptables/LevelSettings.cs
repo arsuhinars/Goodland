@@ -4,4 +4,7 @@
 public class LevelSettings : ScriptableObject
 {
     public Vector3 initialSectionsPos;
+    [Space]
+    public LevelSection[] sectionsPrefabs;
+    public int initialSectionIndex;
 }
