@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fda21d0d75229042a52cdeb42837c0c, type: 3}
+  m_Name: English
+  m_EditorClassIdentifier: 
+  pairs:
+  - key: game_title
+    value: Goodland
+  - key: help_title
+    value: About game
+  - key: options_title
+    value: Options
+  - key: music
+    value: Music
+  - key: sound
+    value: Sounds
+  - key: play
+    value: Start game
+  - key: score
+    value: Score
+  - key: record
+    value: Record
+  - key: go_back
+    value: Go back
+  - key: pause_title
+    value: Pause
+  - key: game_end_title
+    value: You've lost
+  - key: continue
+    value: Continue
+  - key: exit
+    value: Exit
+  - key: play_again
+    value: Play again
+  - key: leave
+    value: Leave
+  - key: help__controls
+    value: Controls
+  - key: help__fly_controls
+    value: W, Arrow up,  Space
+  - key: help__fly_descr
+    value: Fly
+  - key: help__move_controls
+    value: A/D\nArrow left/right
+  - key: help__move_descr
+    value: Movement
+  - key: help__pause_controls
+    value: Escape
+  - key: help__pause_descr
+    value: Pause
+  - key: help__mechanics
+    value: Mechanics
+  - key: help__boxes
+    value: Boxes
+  - key: help__boxes_descr
+    value: They break on fall\nand may kill player
+  - key: help__gears
+    value: Gears
+  - key: help__gears_descr
+    value: They are constantly rotating\nspikes are dangerous\nfor player
+  - key: help__powerups
+    value: Powerups
+  - key: help__powerups_descr
+    value: Powerups for decreasing, increasing\nand resetting player size
+  - key: help__authors
+    value: Authors
+  - key: help__authors_descr
+    value: arsuhinars\n\n<b>Assets and plugins</b>\nKenney.nl\nDemigiant

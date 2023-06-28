@@ -13,13 +13,27 @@ MonoBehaviour:
   m_Name: Russian
   m_EditorClassIdentifier: 
   pairs:
+  - key: game_title
+    value: Goodland
+  - key: help_title
+    value: "\u041E\u0431 \u0438\u0433\u0440\u0435"
+  - key: options_title
+    value: "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438"
+  - key: music
+    value: "\u041C\u0443\u0437\u044B\u043A\u0430"
+  - key: sound
+    value: "\u0417\u0432\u0443\u043A\u0438"
+  - key: play
+    value: "\u041D\u0430\u0447\u0430\u0442\u044C \u0438\u0433\u0440\u0443"
   - key: score
     value: "\u041E\u0447\u043A\u0438"
   - key: record
     value: "\u0420\u0435\u043A\u043E\u0440\u0434"
-  - key: pause_label
+  - key: go_back
+    value: "\u0412\u0435\u0440\u043D\u0443\u0442\u044C\u0441\u044F"
+  - key: pause_title
     value: "\u041F\u0430\u0443\u0437\u0430"
-  - key: game_end_label
+  - key: game_end_title
     value: "\u0412\u044B \u043F\u0440\u043E\u0438\u0433\u0440\u0430\u043B\u0438"
   - key: continue
     value: "\u041F\u0440\u043E\u0434\u043E\u043B\u0436\u0438\u0442\u044C"
@@ -27,3 +41,44 @@ MonoBehaviour:
     value: "\u0412\u044B\u0439\u0442\u0438"
   - key: play_again
     value: "\u0418\u0433\u0440\u0430\u0442\u044C \u0437\u0430\u043D\u043E\u0432\u043E"
+  - key: leave
+    value: "\u0412\u044B\u0439\u0442\u0438"
+  - key: help__controls
+    value: "\u0423\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435"
+  - key: help__fly_controls
+    value: "W, \u0421\u0442\u0440\u0435\u043B\u043A\u0430 \u0432\u0432\u0435\u0440\u0445,
+      \u041F\u0440\u043E\u0431\u0435\u043B"
+  - key: help__fly_descr
+    value: "\u041F\u043E\u043B\u0435\u0442"
+  - key: help__move_controls
+    value: "A/D\\n\u0421\u0442\u0440\u0435\u043B\u043A\u0430 \u0432\u043B\u0435\u0432\u043E/\u0432\u043F\u0440\u0430\u0432\u043E"
+  - key: help__move_descr
+    value: "\u0414\u0432\u0438\u0436\u0435\u043D\u0438\u0435\\n\u0432 \u043F\u043E\u043B\u0435\u0442\u0435"
+  - key: help__pause_controls
+    value: Escape
+  - key: help__pause_descr
+    value: "\u041F\u0430\u0443\u0437\u0430"
+  - key: help__mechanics
+    value: "\u041C\u0435\u0445\u0430\u043D\u0438\u043A\u0438"
+  - key: help__boxes
+    value: "\u041A\u043E\u0440\u043E\u0431\u043A\u0438"
+  - key: help__boxes_descr
+    value: "\u0420\u0430\u0437\u0440\u0443\u0448\u0430\u044E\u0442\u0441\u044F \u043F\u0440\u0438
+      \u043F\u0430\u0434\u0435\u043D\u0438\u0438\\n\u0438 \u043C\u043E\u0433\u0443\u0442
+      \u0443\u0431\u0438\u0442\u044C \u0438\u0433\u0440\u043E\u043A\u0430"
+  - key: help__gears
+    value: "\u0428\u0435\u0441\u0442\u0435\u0440\u043D\u0438"
+  - key: help__gears_descr
+    value: "\u041F\u043E\u0441\u0442\u043E\u044F\u043D\u043D\u043E \u0432\u0440\u0430\u0449\u0430\u044E\u0442\u0441\u044F.
+      \u0428\u0435\u0441\u0442\u0435\u0440\u043D\u0438\\n\u0441 \u0448\u0438\u043F\u0430\u043C\u0438
+      \u043C\u043E\u0433\u0443\u0442 \u0431\u044B\u0442\u044C \u043E\u043F\u0430\u0441\u043D\u044B\u043C\u0438."
+  - key: help__powerups
+    value: "\u0411\u043E\u043D\u0443\u0441\u044B"
+  - key: help__powerups_descr
+    value: "\u0411\u043E\u043D\u0443\u0441\u044B \u0434\u043B\u044F \u0443\u043C\u0435\u043D\u044C\u0448\u0435\u043D\u0438\u044F,
+      \u0443\u0432\u0435\u043B\u0438\u0447\u0435\u043D\u0438\u044F\\n\u0438 \u0441\u0431\u0440\u043E\u0441\u0430
+      \u0440\u0430\u0437\u043C\u0435\u0440\u0430 \u0438\u0433\u0440\u043E\u043A\u0430."
+  - key: help__authors
+    value: "\u0410\u0432\u0442\u043E\u0440\u044B"
+  - key: help__authors_descr
+    value: "arsuhinars\\n\\n<b>\u0410\u0441\u0441\u0435\u0442\u044B \u0438 \u043F\u043B\u0430\u0433\u0438\u043D\u044B</b>\\nKenney.nl\\nDemigiant"
