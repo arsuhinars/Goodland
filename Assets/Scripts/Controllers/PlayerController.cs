@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(PlayerInput))]
 [RequireComponent(typeof(PlayerEntity))]
 public class PlayerController : MonoBehaviour
 {
@@ -11,30 +10,22 @@ public class PlayerController : MonoBehaviour
 
     public void OnFlyInputAction(InputAction.CallbackContext callbackContext)
     {
-        m_playerEntity.FlyFactor = callbackContext.ReadValue<float>();
+        HandleFlyAction(callbackContext.ReadValue<float>());
     }
 
     public void OnStrafeInputAction(InputAction.CallbackContext callbackContext)
     {
-        m_playerEntity.StrafeFactor = callbackContext.ReadValue<float>();
+        HandleStrafeAction(callbackContext.ReadValue<float>());
     }
 
     public void OnPauseInputAction(InputAction.CallbackContext callbackContext)
     {
         if (callbackContext.phase == InputActionPhase.Canceled)
         {
-            var gameManager = GameManager.Instance;
-            if (gameManager.IsPaused)
-            {
-                gameManager.ResumeGame();
-            }
-            else
-            {
-                gameManager.PauseGame();
-            }
+            HandlePauseAction();
         }
     }
-
+    
     private void Awake()
     {
         m_playerEntity = GetComponent<PlayerEntity>();
@@ -45,17 +36,67 @@ public class PlayerController : MonoBehaviour
         m_initialPos = transform.position;
         m_initialRot = transform.rotation;
 
-        GameManager.Instance.OnStart += OnGameStart;
+        var gameManager = GameManager.Instance;
+        gameManager.OnEnterMenu += OnEnterMenu;
+        gameManager.OnStart += OnGameStart;
+
+        var screenInputManager = ScreenInputManager.Instance;
+        screenInputManager.OnPauseClickAction += HandlePauseAction;
+        screenInputManager.OnFlyAction += HandleFlyAction;
+        screenInputManager.OnStrafeAction += HandleStrafeAction;
     }
 
     private void OnDestroy()
     {
-        GameManager.Instance.OnStart -= OnGameStart;
+        var gameManager = GameManager.Instance;
+        if (gameManager != null)
+        {
+            gameManager.OnEnterMenu -= OnEnterMenu;
+            gameManager.OnStart -= OnGameStart;
+        }
+
+        var screenInputManager = ScreenInputManager.Instance;
+        if (screenInputManager != null)
+        {
+            screenInputManager.OnPauseClickAction -= HandlePauseAction;
+            screenInputManager.OnFlyAction -= HandleFlyAction;
+            screenInputManager.OnStrafeAction -= HandleStrafeAction;
+        }
+    }
+
+    private void OnEnterMenu()
+    {
+        m_playerEntity.gameObject.SetActive(false);
     }
 
     private void OnGameStart()
     {
+        m_playerEntity.gameObject.SetActive(true);
+
         transform.SetPositionAndRotation(m_initialPos, m_initialRot);
-        m_playerEntity.ApplyPowerup(PowerupEntity.PowerupType.Reset);
+        m_playerEntity.Spawn();
+    }
+
+    private void HandleFlyAction(float value)
+    {
+        m_playerEntity.FlyFactor = value;
+    }
+
+    private void HandleStrafeAction(float value)
+    {
+        m_playerEntity.StrafeFactor = value;
+    }
+
+    private void HandlePauseAction()
+    {
+        var gameManager = GameManager.Instance;
+        if (gameManager.IsPaused)
+        {
+            gameManager.ResumeGame();
+        }
+        else
+        {
+            gameManager.PauseGame();
+        }
     }
 }
