@@ -14,7 +14,7 @@
                 <ui:VisualElement style="background-image: url(&apos;project://database/Assets/UI/Icons/Pause.png?fileID=21300000&amp;guid=4873fc0095859c248899ba4b6c56e6a9&amp;type=3#Pause&apos;);" />
             </ui:Button>
         </ui:VisualElement>
-        <ui:VisualElement class="game-view__row" style="margin-bottom: 32px;">
+        <MobileElement class="game-view__row" style="margin-bottom: 32px;">
             <ui:VisualElement class="game-view__row">
                 <ui:Button tabindex="-1" name="leftButton" class="game-view__input-control">
                     <ui:VisualElement style="background-image: url(&apos;project://database/Assets/UI/Icons/ArrowLeft.png?fileID=21300000&amp;guid=bf1837370ee1b0b42b3a4b80e6f7d981&amp;type=3#ArrowLeft&apos;);" />
@@ -28,6 +28,6 @@
                     <ui:VisualElement style="background-image: url(&apos;project://database/Assets/UI/Icons/ArrowUp.png?fileID=21300000&amp;guid=58faed3aaf70c574fbb147cc29612d38&amp;type=3#ArrowUp&apos;);" />
                 </ui:Button>
             </ui:VisualElement>
-        </ui:VisualElement>
+        </MobileElement>
     </TransitionElement>
 </ui:UXML>

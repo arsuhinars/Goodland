@@ -8,12 +8,12 @@
 
 .game-view__btn:hover {
     background-color: var(--dark-highlight-color);
-    translate: 0 -6px;
+    scale: 1.1;
 }
 
 .game-view__btn:active {
     background-color: var(--dark-active-color);
-    translate: 0 0;
+    scale: 0.9;
 }
 
 .game-view__btn > VisualElement {
