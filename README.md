@@ -1,18 +1,18 @@
 # Goodland
-Небольшая игра, в которой вам необходимо управляя летающим персонажем проходить
-бесконечные уровни, избегать ловушек и набирать как можно больше очков. Игра
-Badlands использовалась как референс при разработке.
+A little game where you have to control flying character, pass endless levels
+avoiding traps and getting the greatest score. This game used
+[BADLAND](https://store.steampowered.com/app/269670/BADLAND_Game_of_the_Year_Edition/)
+as reference.
 
-На уровнях встречаются ловушки в виде вращающихся шипов или шестеренок,
-статичных препятствий, звезд, которые могут увеличить, уменшить персонажа или
-отменить эффекты.
+There are obstacles like rotating spikes or gears; stars that increase or
+decrease character size.
 
-## Управление
-- __A, D или стрелки влево, вправо__ - перемещение персонажа
-- __W, пробел или стрелка вверх__ - прыжок. Клавишу также можно зажать,
-    чтобы делать постоянные прыжки.
-- __Escape__ - пауза
+## Controls
+* __W, Arrow up or Space__ - flying or jumping
+* __A/D or Arrow left/right__ - movement in air
+* __Escape__ - pause
 
-## Используемые ассеты
-- [Kenney - Physics Assets](https://www.kenney.nl/assets/physics-assets)
-- [DOTween](https://assetstore.unity.com/packages/tools/animation/dotween-hotween-v2-27676)
+## Assets
+* [Kenney - Physics Assets](https://www.kenney.nl/assets/physics-assets)
+* [Kenney - Game Icons](https://kenney.nl/assets/game-icons)
+* [DOTween](https://assetstore.unity.com/packages/tools/animation/dotween-hotween-v2-27676)
