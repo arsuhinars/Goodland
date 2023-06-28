@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4b65993588294346930010027da60fc, type: 3}
+  m_Name: LevelSettings
+  m_EditorClassIdentifier: 
+  initialSectionsPos: {x: 0, y: 4.5, z: 0}
+  sectionsPrefabs:
+  - {fileID: 7239316595351424098, guid: 33829b7035294684d957b1a9dc1e34ed, type: 3}
+  - {fileID: 2615417972809106, guid: a31f266400496b24cbbce44bca5c1d33, type: 3}
+  - {fileID: 6802261763726275741, guid: e3b04fa8b1c4b5c4eb95a0f6b5af3574, type: 3}
+  - {fileID: 2632435106771610735, guid: 4476fd9398778d94dbe0d8b1cb20724a, type: 3}
+  - {fileID: 559881290199828622, guid: 00e5eb664747a0745b71badc75e1d4b7, type: 3}
+  initialSectionIndex: 0

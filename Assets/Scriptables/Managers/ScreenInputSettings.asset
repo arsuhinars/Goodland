@@ -9,7 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd6e5d488c9d88042a9f6dc3642fa0ac, type: 3}
-  m_Name: GameSettings
+  m_Script: {fileID: 11500000, guid: 35c12c22c87473d4eb4001332fa616ae, type: 3}
+  m_Name: ScreenInputSettings
   m_EditorClassIdentifier: 
-  scorePerUnit: 1
+  pauseButtonElementName: pauseButton
+  upButtonElementName: upButton
+  leftButtonElementName: leftButton
+  rightButtonElementName: rightButton

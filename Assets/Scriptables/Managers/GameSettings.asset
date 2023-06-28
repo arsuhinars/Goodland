@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4b65993588294346930010027da60fc, type: 3}
-  m_Name: LevelSettings
+  m_Script: {fileID: 11500000, guid: cd6e5d488c9d88042a9f6dc3642fa0ac, type: 3}
+  m_Name: GameSettings
   m_EditorClassIdentifier: 
-  initialSectionsPos: {x: 0, y: 4.5, z: 0}
+  playerPrefab: {fileID: 8268666215519490445, guid: a196e14191c52944fa0b003e2c819321, type: 3}
+  scorePerUnit: 1
+  fpsLimit: 60
